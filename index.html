@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C++ Programs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="about">
+    <h1>C++ Programs For Practicals</h1>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>1.Function Overloading & Inline Functions</h1>
+    <img src="img/pgm(1).png" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    
+    <button onclick="toggleCode('code1')">Show Code</button>
+    <div class="codeplate" id="code1">
+      <pre><code>
+#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+
+inline int square(int x)
+{
+    return x * x;
+}
+
+int add(int a, int b = 10)
+{
+    return a + b;
+}
+
+int add(int a, int b, int c)
+{
+    return a + b + c;
+}
+
+void main()
+{
+    clrscr();
+    cout << "Square of 5: " << square(5) << endl;
+    cout << "Add (5 + default): " << add(5) << endl;
+    cout << "Add (5 + 6 + 7): " << add(5, 6, 7) << endl;
+    getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>2.Class and Objects</h1>
+    <img src="img/pgm(2).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code2')">Show Code</button>
+    <div class="codeplate" id="code2">
+      ​
+      <pre><code>&lt;include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+​class Student {
+public:
+int roll;
+void getData() {
+roll = 101;
+}
+void showData() {
+cout &lt;&lt; "Roll Number: " &lt;&lt; roll;
+}
+};
+​void main() {
+clrscr();
+Student s; // Object creation
+s.getData();
+s.showData();
+getch();
+}</code></pre>
+    </div>
+  </div>
+  
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>3.Passing Objects to Functions</h1>
+    <img src="img/pgm(3).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code3')">Show Code</button>
+    <div class="codeplate" id="code3">
+      ​
+      <pre><code>#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+​class Number {
+public:
+int a;
+};
+​void display(Number n) { 
+cout &lt;&lt; "Value: " &lt;&lt; n.a;
+}
+​void main() {
+clrscr();
+Number obj;
+obj.a = 50;
+display(obj);
+getch();
+}</code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>4.Friend Functions</h1>
+    <img src="img/pgm(4).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code4')">Show Code</button>
+    <div class="codeplate" id="code4">
+      <pre><code>
+#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+​class Sample {
+int x;
+public:
+Sample() { x = 20; }
+friend void show(Sample s);
+};
+​void show(Sample s) {
+cout &lt;&lt; "Value of x: " &lt;&lt; s.x;
+}
+​void main() {
+clrscr();
+Sample obj;
+show(obj);
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>5.Concept of Passing Objects</h1>
+    <img src="img/pgm(5).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code5')">Show Code</button>
+    <div class="codeplate" id="code5">
+      <pre><code>
+#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+​class Test {
+public:
+int x;
+};
+​void change(Test t) {
+t.x = 100;
+cout &lt;&lt; "Inside function: " &lt;&lt; t.x &lt;&lt; endl;
+}
+​void main() {
+clrscr();
+Test obj;
+obj.x = 10;
+change(obj);
+cout &lt;&lt; "Outside function: " &lt;&lt; obj.x;
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>6.Constructor and Destructor</h1>
+    <img src="img/pgm(6).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code6')">Show Code</button>
+    <div class="codeplate" id="code6">
+      <pre><code>
+#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+​class Demo {
+public:
+Demo() {
+cout &lt;&lt; "Constructor called" &lt;&lt; endl;
+}
+~Demo() {
+cout &lt;&lt; "Destructor called";
+}
+};
+​void main() {
+clrscr();
+Demo obj;
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>7.Unary Operator Overloading</h1>
+    <img src="img/pgm(7).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code7')">Show Code</button>
+    <div class="codeplate" id="code7">
+      <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class Unary {
+int x;
+public:
+Unary(int a) { x = a; }
+void operator ++() {
+x = x + 1;
+}
+void display() {
+cout << "Value = " << x;
+}
+};
+​void main() {
+clrscr();
+Unary obj(10);
+++obj;
+obj.display();
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>8.Binary Operator Overloading</h1>
+    <img src="img/pgm(8).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code8')">Show Code</button>
+    <div class="codeplate" id="code8">
+      <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class Add {
+int a;
+public:
+Add(int x) { a = x; }
+Add operator +(Add obj) {
+return Add(a + obj.a);
+}
+void display() {
+cout << a;
+}
+};
+​void main() {
+clrscr();
+Add a1(10), a2(20);
+Add a3 = a1 + a2;
+cout << "Sum is: ";
+a3.display();
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>9.A)Inheritance (Single)</h1>
+    <img src="img/pgm(9a).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+     
+  <li>
+    Placement: Forgetting that inline functions must be defined before they are called in main().
+    
+  </li>
+  </ol>
+   <button onclick="toggleCode('code9a')">Show Code</button>
+ <div class="codeplate" id="code9a">
+   <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class A {
+public:
+void showA() { cout << "Class A" << endl; }
+};
+​class B : public A {
+public:
+void showB() { cout << "Class B"; }
+};
+​void main() {
+clrscr();
+B obj;
+obj.showA();
+obj.showB();
+getch();
+} 
+  </code></pre>
+ </div>
+ </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>9.B)Multilevel Inheritance</h1>
+    <img src="img/pgm(9b).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code9b')">Show Code</button>
+    <div class="codeplate" id="code9b">
+      <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class A {
+public:
+void showA() { cout << "Class A" << endl; }
+};
+​class B : public A {
+public:
+void showB() { cout << "Class B" << endl; }
+};
+​class C : public B {
+public:
+void showC() { cout << "Class C"; }
+};
+​void main() {
+clrscr();
+C obj;
+obj.showA();
+obj.showB();
+obj.showC();
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>9.C)Multiple Inheritance</h1>
+    <img src="img/pgm(9c).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code9c')">Show Code</button>
+    <div class="codeplate" id="code9c">
+      <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class A {
+public:
+void showA() { cout << "Class A" << endl; }
+};
+​class B {
+public:
+void showB() { cout << "Class B"; }
+};
+​class C : public A, public B {
+};
+​void main() {
+clrscr();
+C obj;
+obj.showA();
+obj.showB();
+getch();
+}
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>10.Virtual Function</h1>
+    <img src="img/pgm(10).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Placement: Forgetting that inline functions must be defined before they are called in main().
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code10')">Show Code</button>
+    <div class="codeplate" id="code10">
+      <pre><code>
+​#include <iostream.h>
+#include <conio.h>
+​class Base {
+public:
+virtual void show() {
+cout << "Base Class";
+}
+};
+​class Derived : public Base {
+public:
+void show() {
+cout << "Derived Class";
+}
+};
+​void main() {
+clrscr();
+Base *b;
+Derived d;
+b = &d;
+b->show();
+getch();
+}
+
+  </code></pre>
+    </div>
+  </div>
+  </div>
+  <hr />
+  <div class="download-section">
+    <a href="img/cpp_images.pdf" class="download-btn" download>
+      ⬇️ Download All Programs (Images)
+    </a>
+    
+  </div>
+  <hr />
+  <footer>
+    <div>
+      <h1>Copyright & Disclaimer</h1>
+      <p>© 2026 Abdul Rahoof. All Rights Reserved.</p>
+      <h3>Content Ownership</h3>
+      <p>All C++ programs and screenshot images displayed on this website are the original work of Abdul Rahoof,This codes run by using Turbo C++.No part of this content may be reproduced or hosted on other platforms without proper written permission.</p>
+      
+    </div>
+    
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
