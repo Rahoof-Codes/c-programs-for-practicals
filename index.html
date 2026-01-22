@@ -64,15 +64,14 @@ void main()
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        Don't forget the semicolon (;) after the closing curly bracket } of the class. Also, remember that you cannot access private variables directly inside main().
         
       </li>
     </ol>
     <button onclick="toggleCode('code2')">Show Code</button>
     <div class="codeplate" id="code2">
       ​
-      <pre><code>
-        #include &lt;iostream.h&gt;
+      <pre><code>#include &lt;iostream.h&gt;
 #include &lt;conio.h&gt;
 ​class Student {
 public:
@@ -102,7 +101,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        If you pass an object normally, the function creates a copy of it. Any changes you make inside that function will not happen to the original object in main().
         
       </li>
     </ol>
@@ -135,7 +134,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        A common mistake is forgetting the keyword friend inside the class. Without it, the function is treated as a stranger and cannot see the private data.
         
       </li>
     </ol>
@@ -169,7 +168,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        In this method, the original value does not change. Students often write the code expecting the value in main() to update, but only the copy inside the function updates.
         
       </li>
     </ol>
@@ -205,7 +204,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        A constructor must have the same name as the class and no return type (not even void). Also, never try to pass arguments to a Destructor (~Demo()).
         
       </li>
     </ol>
@@ -239,7 +238,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        You must declare the operator function properly inside the class. If you are overloading ++ for postfix (like a++), you need to add a dummy int argument to distinguish it.
         
       </li>
     </ol>
@@ -277,7 +276,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        When overloading + inside a class, you only need one argument (the object on the right). Students often mistakenly try to pass two arguments
         
       </li>
     </ol>
@@ -317,7 +316,7 @@ getch();
     <ol>
      
   <li>
-    Placement: Forgetting that inline functions must be defined before they are called in main().
+    if you forget to write public (e.g., class B : public A), the inheritance defaults to private. This means main() won't be able to use the functions from Class A.
     
   </li>
   </ol>
@@ -352,7 +351,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        A common error is not checking the order of inheritance (A to B, then B to C). If you try to access a member from 'A' using an object of 'B' that inherited privately, it will fail.
         
       </li>
     </ol>
@@ -429,7 +428,7 @@ getch();
     <h3>Common Errors:</h3>
     <ol>
       <li>
-        Placement: Forgetting that inline functions must be defined before they are called in main().
+        Virtual functions only work if you use a pointer to the base class (e.g., Base *b). If you just use normal objects, the program will ignore the "virtual" logic
         
       </li>
     </ol>
@@ -464,6 +463,168 @@ getch();
   </div>
   </div>
   <hr />
+  <div class="concept">
+  <h1>11.Text File Heading</h1>
+  <img src="img/pgm(11).jpg" alt="" width="250px" />
+  <h3>Common Errors:</h3>
+  <ol>
+    <li>
+      The most common error is forgetting to close the file with file.close(). If you don't close it, the data you wrote might not be saved properly on the disk.
+    </li>
+  </ol>
+  <button onclick="toggleCode('code11')">Show Code</button>
+  <div class="codeplate" id="code11">
+    <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;fstream.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+clrscr();
+ofstream file("test.txt");
+file &lt;&lt; "Hello File";
+file.close();
+
+ifstream infile("test.txt");
+char text[20];
+infile &gt;&gt; text;
+cout &lt;&lt; text;
+infile.close();
+getch();
+}
+
+  </code></pre>
+  </div>
+</div>
+</div>
+<hr />
+<div class="concept">
+  <h1>12.File Operation</h1>
+  <img src="img/pgm(12).jpg" alt="" width="250px" />
+  <h3>Common Errors:</h3>
+  <ol>
+    <li>
+      Ensure the file name you are trying to open actually exists or is created first. If the program tries to read a missing file, it will output garbage values.
+    </li>
+  </ol>
+  <button onclick="toggleCode('code12')">Show Code</button>
+  <div class="codeplate" id="code12">
+    <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;fstream.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+clrscr();
+ofstream f("data.txt");
+f &lt;&lt; "C++ File";
+f.close();
+cout &lt;&lt; "File Written";
+getch();
+}
+  </code></pre>
+  </div>
+</div>
+</div>
+<hr />
+<div class="concept">
+  <h1>13.Biggest Number(Command Line Arguments)</h1>
+  <img src="img/pgm(13).jpg" alt="" width="250px" />
+  <h3>Common Errors:</h3>
+  <ol>
+    <li>
+      The program will crash or give an error if you forget to type the numbers in the Run > Arguments box before starting. argv[] needs that input to work
+      
+    </li>
+  </ol>
+  <button onclick="toggleCode('code13')">Show Code</button>
+  <div class="codeplate" id="code13">
+    <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;conio.h&gt;
+
+void main(int argc, char *argv[]) {
+clrscr();
+int a = atoi(argv[1]);
+int b = atoi(argv[2]);
+cout &lt;&lt; (a &gt; b ? a : b);
+getch();
+}
+
+  </code></pre>
+  </div>
+</div>
+</div>
+<hr />
+<div class="concept">
+  <h1>14.Class Template</h1>
+  <img src="img/pgm(14).jpg" alt="" width="250px" />
+  <h3>Common Errors:</h3>
+  <ol>
+    <li>
+      When declaring the object in main(), you must specify the data type in brackets (e.g., Test<int> obj). If you forget <int>, the compiler won't know what type of data to store..
+      
+    </li>
+  </ol>
+  <button onclick="toggleCode('code14')">Show Code</button>
+  <div class="codeplate" id="code14">
+    <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+
+template &lt;class T&gt;
+class Test {
+T a;
+public:
+Test(T x) { a = x; }
+void show() { cout &lt;&lt; a; }
+};
+
+void main() {
+clrscr();
+Test&lt;int&gt; t(100);
+t.show();
+getch();
+}
+
+  </code></pre>
+  </div>
+</div>
+</div>
+<hr />
+<div class="concept">
+  <h1>15.Function Template</h1>
+  <img src="img/pgm(15).jpg" alt="" width="250px" />
+  <h3>Common Errors:</h3>
+  <ol>
+    <li>
+      If you try to pass two different types (like one int and one float) to a template that expects only one type T, the compiler will give a mismatch error.
+      
+    </li>
+  </ol>
+  <button onclick="toggleCode('code15')">Show Code</button>
+  <div class="codeplate" id="code15">
+    <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+
+template &lt;class T&gt;
+T add(T a, T b) {
+return a + b;
+}
+
+void main() {
+clrscr();
+cout &lt;&lt; add(10, 20);
+getch();
+}
+
+  </code></pre>
+  </div>
+</div>
+</div>
+<hr />
   <div class="download-section">
     <a href="img/cpp_images.pdf" class="download-btn" download>
       ⬇️ Download All Programs (Images)
