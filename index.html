@@ -245,8 +245,8 @@ getch();
     <button onclick="toggleCode('code7')">Show Code</button>
     <div class="codeplate" id="code7">
       <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+​#include  &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class Unary {
 int x;
 public:
@@ -283,8 +283,8 @@ getch();
     <button onclick="toggleCode('code8')">Show Code</button>
     <div class="codeplate" id="code8">
       <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class Add {
 int a;
 public:
@@ -314,17 +314,17 @@ getch();
     <img src="img/pgm(9a).jpg" alt="" width="250px" />
     <h3>Common Errors:</h3>
     <ol>
-     
-  <li>
-    if you forget to write public (e.g., class B : public A), the inheritance defaults to private. This means main() won't be able to use the functions from Class A.
-    
-  </li>
-  </ol>
-   <button onclick="toggleCode('code9a')">Show Code</button>
- <div class="codeplate" id="code9a">
-   <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+      
+      <li>
+        if you forget to write public (e.g., class B : public A), the inheritance defaults to private. This means main() won't be able to use the functions from Class A.
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code9a')">Show Code</button>
+    <div class="codeplate" id="code9a">
+      <pre><code>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class A {
 public:
 void showA() { cout << "Class A" << endl; }
@@ -341,8 +341,8 @@ obj.showB();
 getch();
 } 
   </code></pre>
- </div>
- </div>
+    </div>
+  </div>
   </div>
   <hr />
   <div class="concept">
@@ -358,8 +358,8 @@ getch();
     <button onclick="toggleCode('code9b')">Show Code</button>
     <div class="codeplate" id="code9b">
       <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class A {
 public:
 void showA() { cout << "Class A" << endl; }
@@ -398,8 +398,8 @@ getch();
     <button onclick="toggleCode('code9c')">Show Code</button>
     <div class="codeplate" id="code9c">
       <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class A {
 public:
 void showA() { cout << "Class A" << endl; }
@@ -435,8 +435,8 @@ getch();
     <button onclick="toggleCode('code10')">Show Code</button>
     <div class="codeplate" id="code10">
       <pre><code>
-​#include <iostream.h>
-#include <conio.h>
+​#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
 ​class Base {
 public:
 virtual void show() {
@@ -464,17 +464,17 @@ getch();
   </div>
   <hr />
   <div class="concept">
-  <h1>11.Text File Heading</h1>
-  <img src="img/pgm(11).jpg" alt="" width="250px" />
-  <h3>Common Errors:</h3>
-  <ol>
-    <li>
-      The most common error is forgetting to close the file with file.close(). If you don't close it, the data you wrote might not be saved properly on the disk.
-    </li>
-  </ol>
-  <button onclick="toggleCode('code11')">Show Code</button>
-  <div class="codeplate" id="code11">
-    <pre><code>
+    <h1>11.Text File Heading</h1>
+    <img src="img/pgm(11).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        The most common error is forgetting to close the file with file.close(). If you don't close it, the data you wrote might not be saved properly on the disk.
+      </li>
+    </ol>
+    <button onclick="toggleCode('code11')">Show Code</button>
+    <div class="codeplate" id="code11">
+      <pre><code>
 ​#include &lt;iostream.h&gt;
 #include &lt;fstream.h&gt;
 #include &lt;conio.h&gt;
@@ -494,22 +494,22 @@ getch();
 }
 
   </code></pre>
+    </div>
   </div>
-</div>
-</div>
-<hr />
-<div class="concept">
-  <h1>12.File Operation</h1>
-  <img src="img/pgm(12).jpg" alt="" width="250px" />
-  <h3>Common Errors:</h3>
-  <ol>
-    <li>
-      Ensure the file name you are trying to open actually exists or is created first. If the program tries to read a missing file, it will output garbage values.
-    </li>
-  </ol>
-  <button onclick="toggleCode('code12')">Show Code</button>
-  <div class="codeplate" id="code12">
-    <pre><code>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>12.File Operation</h1>
+    <img src="img/pgm(12).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        Ensure the file name you are trying to open actually exists or is created first. If the program tries to read a missing file, it will output garbage values.
+      </li>
+    </ol>
+    <button onclick="toggleCode('code12')">Show Code</button>
+    <div class="codeplate" id="code12">
+      <pre><code>
 ​#include &lt;iostream.h&gt;
 #include &lt;fstream.h&gt;
 #include &lt;conio.h&gt;
@@ -523,23 +523,23 @@ cout &lt;&lt; "File Written";
 getch();
 }
   </code></pre>
+    </div>
   </div>
-</div>
-</div>
-<hr />
-<div class="concept">
-  <h1>13.Biggest Number(Command Line Arguments)</h1>
-  <img src="img/pgm(13).jpg" alt="" width="250px" />
-  <h3>Common Errors:</h3>
-  <ol>
-    <li>
-      The program will crash or give an error if you forget to type the numbers in the Run > Arguments box before starting. argv[] needs that input to work
-      
-    </li>
-  </ol>
-  <button onclick="toggleCode('code13')">Show Code</button>
-  <div class="codeplate" id="code13">
-    <pre><code>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>13.Biggest Number(Command Line Arguments)</h1>
+    <img src="img/pgm(13).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        The program will crash or give an error if you forget to type the numbers in the Run > Arguments box before starting. argv[] needs that input to work
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code13')">Show Code</button>
+    <div class="codeplate" id="code13">
+      <pre><code>
 ​#include &lt;iostream.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;conio.h&gt;
@@ -553,23 +553,23 @@ getch();
 }
 
   </code></pre>
+    </div>
   </div>
-</div>
-</div>
-<hr />
-<div class="concept">
-  <h1>14.Class Template</h1>
-  <img src="img/pgm(14).jpg" alt="" width="250px" />
-  <h3>Common Errors:</h3>
-  <ol>
-    <li>
-      When declaring the object in main(), you must specify the data type in brackets (e.g., Test<int> obj). If you forget <int>, the compiler won't know what type of data to store..
-      
-    </li>
-  </ol>
-  <button onclick="toggleCode('code14')">Show Code</button>
-  <div class="codeplate" id="code14">
-    <pre><code>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>14.Class Template</h1>
+    <img src="img/pgm(14).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        When declaring the object in main(), you must specify the data type in brackets (e.g., Test<int> obj). If you forget <int>, the compiler won't know what type of data to store..
+            
+      </li>
+    </ol>
+    <button onclick="toggleCode('code14')">Show Code</button>
+    <div class="codeplate" id="code14">
+      <pre><code>
 ​#include &lt;iostream.h&gt;
 #include &lt;conio.h&gt;
 
@@ -589,23 +589,23 @@ getch();
 }
 
   </code></pre>
+    </div>
   </div>
-</div>
-</div>
-<hr />
-<div class="concept">
-  <h1>15.Function Template</h1>
-  <img src="img/pgm(15).jpg" alt="" width="250px" />
-  <h3>Common Errors:</h3>
-  <ol>
-    <li>
-      If you try to pass two different types (like one int and one float) to a template that expects only one type T, the compiler will give a mismatch error.
-      
-    </li>
-  </ol>
-  <button onclick="toggleCode('code15')">Show Code</button>
-  <div class="codeplate" id="code15">
-    <pre><code>
+  </div>
+  <hr />
+  <div class="concept">
+    <h1>15.Function Template</h1>
+    <img src="img/pgm(15).jpg" alt="" width="250px" />
+    <h3>Common Errors:</h3>
+    <ol>
+      <li>
+        If you try to pass two different types (like one int and one float) to a template that expects only one type T, the compiler will give a mismatch error.
+        
+      </li>
+    </ol>
+    <button onclick="toggleCode('code15')">Show Code</button>
+    <div class="codeplate" id="code15">
+      <pre><code>
 ​#include &lt;iostream.h&gt;
 #include &lt;conio.h&gt;
 
@@ -621,10 +621,10 @@ getch();
 }
 
   </code></pre>
+    </div>
   </div>
-</div>
-</div>
-<hr />
+  </div>
+  <hr />
   <div class="download-section">
     <a href="img/cpp_images.pdf" class="download-btn" download>
       ⬇️ Download All Programs (Images)
